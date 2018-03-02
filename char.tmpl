@@ -1,0 +1,12 @@
+<table style="width: 100%;" bgcolor="#222226">
+<tbody>
+<tr>
+<td style="width: 40%;"><img class="alignnone wp-image-221" src="{{.Character.ThumbnailURL}}" alt="" width="100" height="100" /></td>
+<td style="width: 60%;"><strong> <span style="color: {{.Character.Class | getClassColor}}; font-family: friz-quadrata, sans-serif; font-size: 12pt;">{{.Character.Name}}&nbsp;<span style="color: #ffffff; font-size: 9pt;">{{.Ilvl}}&nbsp;<span style="color: {{.Character.MythicPlusScores.All|getMythicColor}}; font-size: 9pt;">{{ .Character.MythicPlusScores.All | mythicFilter}}</span></span></span></strong>
+<img class="alignright wp-image-237 size-full" title="{{.Role | toUpper}}" src="https://bisboost.me/wp-content/uploads/2018/02/{{.Role | toLower}}.png" alt="" width="30" height="30" /><span style="color: #f0ead6; font-size: 9pt;">{{.Realm | realmFormat}}<span style="font-size: 10pt;">
+</span>
+<span style="color: #a335ee;">{{.CurrentTierProgress}}/{{.CurrentTierBosses}}M</span>
+<a href="https://www.warcraftlogs.com/character/eu/{{.Realm|toLower}}/{{.Character.Name}}" target="_blank" rel="noopener"><img class="alignnone wp-image-41" title="View WCL Page" src="https://bisboost.me/wcl.png" alt="" width="30" height="30" /></a>&nbsp;<a href="https://worldofwarcraft.com/en-gb/character/{{.Realm|toLower}}/{{.Character.Name}}" target="_blank" rel="noopener"><img class="alignnone wp-image-41" title="View Armory Page" src="https://bisboost.me/wp-content/uploads/2018/02/uursjmaslkinnqaavnyc-150x150.png" alt="" width="30" height="30" /></a>&nbsp;<a href="https://raider.io/characters/eu/{{.Realm|toLower}}/{{.Character.Name}}" target="_blank" rel="noopener"><img class="alignnone wp-image-41" title="View Raider.io Page" src="https://bisboost.me/raiderio_square_xl.png" alt="" width="30" height="30" /></a>{{if .Twitch}}&nbsp;<a href="https://twitch.tv/{{.Twitch}}" target="_blank" rel="noopener"><img class="alignnone wp-image-41" title="View Twitch Page" src="https://bisboost.me/twitch.png" alt="" width="30" height="30" /></a>{{end}}</td>
+</tr>
+</tbody>
+</table>
